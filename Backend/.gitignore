@@ -1,0 +1,47 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Logs
+logs/
+*.log
+logs/**/*.log
+debug.log
+
+# Ambiente de desenvolvimento
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Cache e arquivos temporários
+*.cache
+.cache/
+tmp/
+temp/
+dist/
+build/
+
+# Pastas específicas do SO
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Processos do sistema
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Bancos de dados locais
+*.sqlite
+*.sqlite3
+mongodb/
+dump/
