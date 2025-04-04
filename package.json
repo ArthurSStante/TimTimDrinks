@@ -7,5 +7,14 @@
   },
   "author": "Arthur Saltori",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurSStante/TimTimDrinks.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ArthurSStante/TimTimDrinks/issues"
+  },
+  "homepage": "https://github.com/ArthurSStante/TimTimDrinks#readme",
   "description": ""
 }
