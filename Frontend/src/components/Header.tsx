@@ -4,35 +4,47 @@ import {
   AppstoreOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
+import { ConfigProvider } from "antd";
 
 const { Header } = Layout;
 const { Title } = Typography;
 
 const AppHeader = () => {
   return (
-    <Header
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        background: "#001529",
+    <ConfigProvider
+      theme={{
+        components: {
+          Menu: {
+            itemBg: "#001529",
+            horizontalItemHoverBg: "#ffffff", // Hover
+            horizontalItemSelectedBg: "#bae7ff", // Selecionado
+            horizontalItemSelectedColor: "#000000", // Letras e barra 
+          },
+        },
       }}
     >
-      <Title level={3} style={{ color: "white", margin: 0 }}>
-        TimTimDrinks
-      </Title>
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-        <Menu.Item key="1" icon={<HomeOutlined />}>
-          Início
-        </Menu.Item>
-        <Menu.Item key="2" icon={<AppstoreOutlined />}>
-          Cardápio
-        </Menu.Item>
-        <Menu.Item key="3" icon={<PhoneOutlined />}>
-          Contato
-        </Menu.Item>
-      </Menu>
-    </Header>
+      <Header
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "#bae7ff",
+        }}
+      >
+        <Title level={3} style={{ color: "white", margin: 0 }}>
+          TimTimDrinks
+        </Title>
+        <Menu
+          mode="horizontal"
+          defaultSelectedKeys={["1"]}
+          items={[
+            { key: "1", icon: <HomeOutlined />, label: "Início" },
+            { key: "2", icon: <AppstoreOutlined />, label: "Cardápio" },
+            { key: "3", icon: <PhoneOutlined />, label: "Contato" },
+          ]}
+        />
+      </Header>
+    </ConfigProvider>
   );
 };
 
